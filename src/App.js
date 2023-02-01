@@ -1,23 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
-
+import redrose from "./redrose.jpg"
+import whiterose from "./whiterose.png"
+import {useState} from "react"
 function App() {
+
+const [change, setChange]= useState(true)
+
+  const clickHandler = ( )=>{
+  setChange(prevVal => !prevVal )
+ }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Hello</h1>
+      <div   onClick={clickHandler}>
+      { change ? (<img  className="rose" src={whiterose}/>) : (<img className="rose" src={redrose}/>)}
+    </div>
     </div>
   );
 }
