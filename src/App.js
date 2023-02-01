@@ -13,6 +13,7 @@ const [change, setChange]= useState(true)
   return (
     <div className="App">
       <h1>Hello World</h1>
+      <p>Lorem ipsum dolor sit amet.</p>
       <div   onClick={clickHandler}>
       { change ? (<img  className="rose" src={whiterose}/>) : (<img className="rose" src={redrose}/>)}
     </div>
